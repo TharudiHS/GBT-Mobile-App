@@ -116,11 +116,28 @@ class TextStyles {
     fontWeight: FontWeight.bold,
     fontSize: 13,
   );
+  static const TextStyle size14WeightBoldTTCommonsMedium = TextStyle(
+    fontFamily: 'TT Commons Medium',
+    color: AppColours.white,
+    fontWeight: FontWeight.bold,
+    fontSize: 14,
+  );
+  static const TextStyle size14WeightBoldTTCommonsMediumblack = TextStyle(
+    fontFamily: 'TT Commons Medium',
+    color: AppColours.black,
+    fontWeight: FontWeight.bold,
+    fontSize: 14,
+  );
   static const TextStyle size13WeightBoldTTCommonsRegular = TextStyle(
     fontFamily: 'TT Commons Regular',
     color: AppColours.black,
     fontWeight: FontWeight.bold,
     fontSize: 13,
+  );
+  static const TextStyle size15TCommonsRegular = TextStyle(
+    fontFamily: 'TT Commons Regular',
+    color: AppColours.white,
+    fontSize: 15,
   );
   static const TextStyle size22WeightBoldTTCommonsRegular = TextStyle(
     fontFamily: 'TT Commons Regular',

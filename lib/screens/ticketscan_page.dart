@@ -1,3 +1,4 @@
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'ticket_txid_page.dart';
 import 'ticket_summary_page.dart';
@@ -53,17 +54,13 @@ class _TicketScanPageState extends State<TicketScanPage> {
 
   @override
   Widget build(BuildContext context) {
-    const Color goldColor = Color(0xFFAC9A58);
-    const Color whiteColor = Colors.white;
-    const Color blackColor = Colors.black;
-
     return Scaffold(
       drawer: const SidebarPage(),
-      backgroundColor: whiteColor,
+      backgroundColor: AppColours.white,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(96),
         child: Container(
-          color: goldColor,
+          color: AppColours.gold,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SafeArea(
             child: Row(
@@ -71,14 +68,14 @@ class _TicketScanPageState extends State<TicketScanPage> {
               children: [
                 Builder(
                   builder: (context) => IconButton(
-                    icon: const Icon(Icons.menu, color: Colors.white),
+                    icon: const Icon(Icons.menu, color: AppColours.white),
                     onPressed: () {
                       Scaffold.of(context).openDrawer();
                     },
                   ),
                 ),
                 Image.asset('assets/images/gbt_logo_white.png', height: 40),
-                const Icon(Icons.sync, color: whiteColor),
+                const Icon(Icons.sync, color: AppColours.white),
               ],
             ),
           ),
@@ -89,7 +86,7 @@ class _TicketScanPageState extends State<TicketScanPage> {
           // Session Info Card
           Container(
             width: double.infinity,
-            color: blackColor,
+            color: AppColours.black,
             padding: const EdgeInsets.all(16),
             child: Row(
               children: [
@@ -110,7 +107,7 @@ class _TicketScanPageState extends State<TicketScanPage> {
                           fontFamily: 'TT Commons Regular',
                           fontWeight: FontWeight.bold,
                           fontSize: 17,
-                          color: whiteColor,
+                          color: AppColours.white,
                         ),
                       ),
                       const SizedBox(height: 7),
@@ -119,7 +116,7 @@ class _TicketScanPageState extends State<TicketScanPage> {
                         style: const TextStyle(
                           fontFamily: 'TT Commons Regular',
                           fontSize: 12,
-                          color: whiteColor,
+                          color: AppColours.white,
                         ),
                       ),
                     ],
@@ -131,7 +128,7 @@ class _TicketScanPageState extends State<TicketScanPage> {
                     vertical: 6,
                   ),
                   decoration: BoxDecoration(
-                    color: goldColor,
+                    color: AppColours.gold,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Text(
@@ -139,7 +136,7 @@ class _TicketScanPageState extends State<TicketScanPage> {
                     style: const TextStyle(
                       fontFamily: 'TT Commons Regular',
                       fontSize: 14,
-                      color: whiteColor,
+                      color: AppColours.white,
                     ),
                   ),
                 ),
@@ -187,10 +184,10 @@ class _TicketScanPageState extends State<TicketScanPage> {
                                 fontFamily: 'Cormorant Garamond',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 30,
-                                color: Colors.white,
+                                color: AppColours.white,
                                 shadows: [
                                   Shadow(
-                                    color: Colors.black,
+                                    color: AppColours.black,
                                     offset: Offset(0, 1),
                                     blurRadius: 5,
                                   ),
@@ -212,14 +209,14 @@ class _TicketScanPageState extends State<TicketScanPage> {
 
       // Bottom Nav Bar
       bottomNavigationBar: Container(
-        color: blackColor,
+        color: AppColours.black,
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _buildNavButton(0, Icons.qr_code, "QR", goldColor),
-            _buildNavButton(1, Icons.text_snippet, "TX ID", goldColor),
-            _buildNavButton(2, Icons.article, "Summary", goldColor),
+            _buildNavButton(0, Icons.qr_code, "QR", AppColours.gold),
+            _buildNavButton(1, Icons.text_snippet, "TX ID", AppColours.gold),
+            _buildNavButton(2, Icons.article, "Summary", AppColours.gold),
           ],
         ),
       ),
@@ -241,19 +238,19 @@ class _TicketScanPageState extends State<TicketScanPage> {
         height: 35,
         decoration: BoxDecoration(
           color: isSelected ? goldColor : Colors.transparent,
-          border: Border.all(color: Colors.white),
+          border: Border.all(color: AppColours.white),
           borderRadius: BorderRadius.circular(5),
         ),
         child: Row(
           children: [
-            Icon(icon, color: Colors.white, size: 18),
+            Icon(icon, color: AppColours.white, size: 18),
             const SizedBox(width: 6),
             Text(
               label,
               style: const TextStyle(
                 fontFamily: 'TT Commons Regular',
                 fontSize: 15,
-                color: Colors.white,
+                color: AppColours.white,
               ),
             ),
           ],

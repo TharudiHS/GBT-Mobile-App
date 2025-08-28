@@ -1,3 +1,4 @@
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'sidebar_page.dart';
 import 'ticketscan_page.dart';
@@ -55,11 +56,11 @@ class _SessionListPageState extends State<SessionListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const SidebarPage(),
-      backgroundColor: const Color(0xFFFFFFFF),
+      backgroundColor: AppColours.white,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(96),
         child: Container(
-          color: const Color(0xFFAC9A58),
+          color: AppColours.gold,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SafeArea(
             child: Row(
@@ -67,7 +68,7 @@ class _SessionListPageState extends State<SessionListPage> {
               children: [
                 Builder(
                   builder: (context) => IconButton(
-                    icon: const Icon(Icons.menu, color: Colors.white),
+                    icon: const Icon(Icons.menu, color: AppColours.white),
                     onPressed: () {
                       Scaffold.of(context).openDrawer();
                     },
@@ -83,7 +84,7 @@ class _SessionListPageState extends State<SessionListPage> {
         children: [
           Container(
             width: double.infinity,
-            color: Colors.black,
+            color: AppColours.black,
             padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
             alignment: Alignment.centerLeft,
             child: Row(
@@ -100,7 +101,7 @@ class _SessionListPageState extends State<SessionListPage> {
                     fontFamily: 'TT Commons Regular',
                     fontWeight: FontWeight.bold,
                     fontSize: 22,
-                    color: Colors.white,
+                    color: AppColours.white,
                     letterSpacing: 0,
                   ),
                 ),
@@ -131,7 +132,7 @@ class _SessionListPageState extends State<SessionListPage> {
                     );
                   },
                   child: Container(
-                    color: isSelected ? const Color(0xA6AC9A58) : Colors.white,
+                    color: isSelected ? AppColours.gold40 : AppColours.white,
                     padding: const EdgeInsets.symmetric(
                       vertical: 16,
                       horizontal: 16,
@@ -185,7 +186,7 @@ class _SessionListPageState extends State<SessionListPage> {
                     fontFamily: 'TT Commons Regular',
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
-                    color: Colors.black,
+                    color: AppColours.black,
                   ),
                 ),
                 const SizedBox(height: 9),
@@ -194,7 +195,7 @@ class _SessionListPageState extends State<SessionListPage> {
                   style: const TextStyle(
                     fontFamily: 'TT Commons Regular',
                     fontSize: 12,
-                    color: Colors.black,
+                    color: AppColours.black,
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -204,7 +205,7 @@ class _SessionListPageState extends State<SessionListPage> {
                     horizontal: 12,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFAC9A58),
+                    color: AppColours.gold,
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Text(
@@ -213,7 +214,7 @@ class _SessionListPageState extends State<SessionListPage> {
                       fontFamily: 'TT Commons Regular',
                       fontWeight: FontWeight.w500,
                       fontSize: 12,
-                      color: Colors.white,
+                      color: AppColours.white,
                     ),
                   ),
                 ),
@@ -223,7 +224,7 @@ class _SessionListPageState extends State<SessionListPage> {
         ),
         Padding(
           padding: const EdgeInsets.only(top: 50.0),
-          child: Icon(Icons.chevron_right, color: Colors.black, size: 30),
+          child: Icon(Icons.chevron_right, color: AppColours.black, size: 30),
         ),
       ],
     );

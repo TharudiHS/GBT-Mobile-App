@@ -1,3 +1,4 @@
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'sessionlist_page.dart';
 
@@ -26,14 +27,14 @@ class _LoginPageState extends State<LoginPage> {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColours.white,
       body: Column(
         children: [
           // Header with logo
           Container(
             height: 96,
             width: double.infinity,
-            color: const Color(0xFFAC9A58),
+            color: AppColours.gold,
             alignment: Alignment.centerLeft,
             padding: const EdgeInsets.only(left: 25, top: 25),
             child: Image.asset(
@@ -62,25 +63,21 @@ class _LoginPageState extends State<LoginPage> {
                         fontFamily: 'CormorantGaramond-Bold',
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: AppColours.black,
                       ),
                     ),
 
                     const SizedBox(height: 24),
 
                     // Golden line
-                    Container(
-                      height: 1,
-                      width: 343,
-                      color: const Color(0xFFAC9A58),
-                    ),
+                    Container(height: 1, width: 343, color: AppColours.gold),
 
                     const SizedBox(height: 32),
 
                     // Email Input
                     Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xFFE3E3E3),
+                        color: AppColours.greyE3,
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: TextFormField(
@@ -95,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: 'Email*',
                           hintStyle: TextStyle(
                             fontFamily: 'TT Commons Italic',
-                            color: Color(0xFFB5B5B5),
+                            color: AppColours.greyB5,
                             fontSize: 12,
                           ),
                         ),
@@ -119,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                     // Password Input
                     Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xFFE3E3E3),
+                        color: AppColours.greyE3,
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: TextFormField(
@@ -134,7 +131,7 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: 'Password*',
                           hintStyle: TextStyle(
                             fontFamily: 'TT Commons Italic',
-                            color: Color(0xFFB5B5B5),
+                            color: AppColours.greyB5,
                             fontSize: 12,
                           ),
                         ),
@@ -165,7 +162,7 @@ class _LoginPageState extends State<LoginPage> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(
-                                color: const Color(0xFFAC9A58),
+                                color: AppColours.gold,
                                 width: 2,
                               ),
                             ),
@@ -176,7 +173,7 @@ class _LoginPageState extends State<LoginPage> {
                                       height: 8,
                                       decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
-                                        color: Color(0xFFAC9A58),
+                                        color: AppColours.gold,
                                       ),
                                     ),
                                   )
@@ -190,7 +187,7 @@ class _LoginPageState extends State<LoginPage> {
                             fontFamily: 'TT Commons Regular',
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
-                            color: Colors.black,
+                            color: AppColours.black,
                           ),
                         ),
                       ],
@@ -214,7 +211,7 @@ class _LoginPageState extends State<LoginPage> {
                           }
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFAC9A58),
+                          backgroundColor: AppColours.gold,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5),
                           ),
@@ -225,7 +222,7 @@ class _LoginPageState extends State<LoginPage> {
                             fontFamily: 'TT Commons Regular',
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            color: AppColours.white,
                           ),
                         ),
                       ),

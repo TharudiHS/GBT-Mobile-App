@@ -1,4 +1,5 @@
 import 'package:bawatrust_app/utils/app_colours.dart';
+import 'package:bawatrust_app/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class TicketPopup extends StatelessWidget {
@@ -45,11 +46,7 @@ class TicketPopup extends StatelessWidget {
                     Expanded(
                       child: Text(
                         title,
-                        style: const TextStyle(
-                          fontFamily: 'TT Commons DemiBold',
-                          fontSize: 24,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size24TTCommonsDemiBold,
                       ),
                     ),
                     Padding(
@@ -67,11 +64,7 @@ class TicketPopup extends StatelessWidget {
                         ),
                         child: Text(
                           time,
-                          style: const TextStyle(
-                            fontFamily: 'TT Commons Regular',
-                            fontSize: 14,
-                            color: AppColours.white,
-                          ),
+                          style: TextStyles.size14TTCommonsRegular,
                         ),
                       ),
                     ),
@@ -81,14 +74,7 @@ class TicketPopup extends StatelessWidget {
                 const SizedBox(height: 20),
 
                 // Date
-                Text(
-                  date,
-                  style: const TextStyle(
-                    fontFamily: 'TT Commons Regular',
-                    fontSize: 10,
-                    color: AppColours.white,
-                  ),
-                ),
+                Text(date, style: TextStyles.size10TTCommonsRegular),
 
                 const SizedBox(height: 24),
 
@@ -106,20 +92,12 @@ class TicketPopup extends StatelessWidget {
                     children: [
                       Text(
                         availableCount.toString(),
-                        style: const TextStyle(
-                          fontFamily: 'TT Commons Medium',
-                          fontSize: 20,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size20TTCommonsMedium,
                       ),
                       const SizedBox(height: 2),
                       const Text(
                         'Available Ticket Count',
-                        style: TextStyle(
-                          fontFamily: 'TT Commons Regular',
-                          fontSize: 13,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size13TTCommonsRegularwhite,
                       ),
                     ],
                   ),
@@ -137,20 +115,12 @@ class TicketPopup extends StatelessWidget {
                     children: [
                       const Text(
                         'Reference No.',
-                        style: TextStyle(
-                          fontFamily: 'TT Commons Regular',
-                          fontSize: 14,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size14TTCommonsRegular,
                       ),
                       const SizedBox(height: 18),
                       Text(
                         referenceNo,
-                        style: const TextStyle(
-                          fontFamily: 'TT Commons Medium',
-                          fontSize: 14,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size14TTCommonsRegular,
                       ),
                     ],
                   ),
@@ -171,11 +141,7 @@ class TicketPopup extends StatelessWidget {
                     onPressed: onRedeem,
                     child: const Text(
                       'Redeem',
-                      style: TextStyle(
-                        fontFamily: 'TT Commons Medium',
-                        fontSize: 16,
-                        color: AppColours.white,
-                      ),
+                      style: TextStyles.size16WeightBoldTTCommonsMedium,
                     ),
                   ),
                 ),

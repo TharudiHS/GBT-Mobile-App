@@ -1,3 +1,4 @@
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'ticketscan_page.dart';
 import 'ticket_txid_page.dart';
@@ -54,25 +55,20 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
 
   @override
   Widget build(BuildContext context) {
-    const Color whiteColor = Color(0xFFFFFFFF);
-    const Color blackColor = Color(0xFF000000);
-    const Color goldColor = Color(0xFFAC9A58);
-    const Color gold40 = Color.fromRGBO(172, 154, 88, 0.4);
-
     return Scaffold(
-      backgroundColor: whiteColor,
+      backgroundColor: AppColours.white,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(96),
         child: Container(
-          color: goldColor,
+          color: AppColours.gold,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SafeArea(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(Icons.menu, color: whiteColor),
+                const Icon(Icons.menu, color: AppColours.white),
                 Image.asset('assets/images/gbt_logo_white.png', height: 40),
-                const Icon(Icons.sync, color: whiteColor),
+                const Icon(Icons.sync, color: AppColours.white),
               ],
             ),
           ),
@@ -82,7 +78,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
         children: [
           Container(
             width: double.infinity,
-            color: blackColor,
+            color: AppColours.black,
             padding: const EdgeInsets.all(16),
             child: Row(
               children: [
@@ -103,7 +99,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                           fontFamily: 'TT Commons Regular',
                           fontWeight: FontWeight.bold,
                           fontSize: 17,
-                          color: whiteColor,
+                          color: AppColours.white,
                         ),
                       ),
                       const SizedBox(height: 7),
@@ -112,7 +108,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                         style: const TextStyle(
                           fontFamily: 'TT Commons Regular',
                           fontSize: 12,
-                          color: whiteColor,
+                          color: AppColours.white,
                         ),
                       ),
                     ],
@@ -124,7 +120,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                     vertical: 6,
                   ),
                   decoration: BoxDecoration(
-                    color: goldColor,
+                    color: AppColours.gold,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Text(
@@ -132,7 +128,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                     style: const TextStyle(
                       fontFamily: 'TT Commons Regular',
                       fontSize: 14,
-                      color: whiteColor,
+                      color: AppColours.white,
                     ),
                   ),
                 ),
@@ -146,7 +142,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
             margin: const EdgeInsets.symmetric(horizontal: 24),
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
-              color: const Color(0x1C000000),
+              color: AppColours.black,
               borderRadius: BorderRadius.circular(5),
             ),
             child: Row(
@@ -157,7 +153,9 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                     child: Container(
                       height: 35,
                       decoration: BoxDecoration(
-                        color: showTicketSummary ? goldColor : gold40,
+                        color: showTicketSummary
+                            ? AppColours.gold
+                            : AppColours.goldOpacity40,
                         borderRadius: BorderRadius.circular(5),
                       ),
                       alignment: Alignment.center,
@@ -167,7 +165,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                           fontFamily: 'TT Commons Medium',
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
-                          color: whiteColor,
+                          color: AppColours.white,
                         ),
                       ),
                     ),
@@ -179,7 +177,9 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                     child: Container(
                       height: 35,
                       decoration: BoxDecoration(
-                        color: !showTicketSummary ? goldColor : gold40,
+                        color: !showTicketSummary
+                            ? AppColours.gold
+                            : AppColours.goldOpacity40,
                         borderRadius: BorderRadius.circular(5),
                       ),
                       alignment: Alignment.center,
@@ -189,7 +189,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                           fontFamily: 'TT Commons Medium',
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
-                          color: whiteColor,
+                          color: AppColours.white,
                         ),
                       ),
                     ),
@@ -212,14 +212,14 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
 
       // Bottom Nav Bar
       bottomNavigationBar: Container(
-        color: blackColor,
+        color: AppColours.black,
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _buildNavButton(0, Icons.qr_code, "QR", goldColor),
-            _buildNavButton(1, Icons.text_snippet, "TX ID", goldColor),
-            _buildNavButton(2, Icons.article, "Summary", goldColor),
+            _buildNavButton(0, Icons.qr_code, "QR", AppColours.gold),
+            _buildNavButton(1, Icons.text_snippet, "TX ID", AppColours.gold),
+            _buildNavButton(2, Icons.article, "Summary", AppColours.gold),
           ],
         ),
       ),
@@ -227,41 +227,44 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
   }
 
   Table _buildTicketSummaryTable() {
-    const goldColor = Color(0xFFAC9A58);
-    const gold40 = Color.fromRGBO(172, 154, 88, 0.4);
-    const creamColor = Color(0xFFFFF9EC);
-
     return Table(
       columnWidths: const {0: FlexColumnWidth(2), 1: FlexColumnWidth(1)},
       border: TableBorder.symmetric(
-        inside: BorderSide(color: Color(0xFFFFFFFF), width: 2),
+        inside: BorderSide(color: AppColours.white, width: 2),
       ),
       children: [
         _buildTableRow(
           "Ticket Type",
           "Total Redeemed  Tickets Count",
           isHeader: true,
-          bgColor: goldColor,
+          bgColor: AppColours.gold,
         ),
-        _buildTableRow("Foreign", "5", bgColor: gold40, isTotal: true),
+        _buildTableRow(
+          "Foreign",
+          "5",
+          bgColor: AppColours.goldOpacity40,
+          isTotal: true,
+        ),
         _buildTableRow(
           "Local (Adult)",
           "6",
-          bgColor: creamColor,
+          bgColor: AppColours.cream,
           isTotal: true,
         ),
-        _buildTableRow("Local (Child)", "4", bgColor: gold40, isTotal: true),
-        _buildTableRow("Total", "15", isTotal: true, bgColor: goldColor),
+        _buildTableRow(
+          "Local (Child)",
+          "4",
+          bgColor: AppColours.goldOpacity40,
+          isTotal: true,
+        ),
+        _buildTableRow("Total", "15", isTotal: true, bgColor: AppColours.gold),
       ],
     );
   }
 
   Table _buildReservationsTable() {
-    const goldColor = Color(0xFFAC9A58);
-    const gold40 = Color.fromRGBO(172, 154, 88, 0.4);
-
     return Table(
-      border: TableBorder.all(color: Colors.white, width: 1),
+      border: TableBorder.all(color: AppColours.white, width: 1),
       columnWidths: const {
         0: FlexColumnWidth(2),
         1: FlexColumnWidth(3),
@@ -273,32 +276,32 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
           "Name",
           "Ticket Type",
           isHeader: true,
-          bgColor: goldColor,
+          bgColor: AppColours.gold,
         ),
         _buildReservationRow(
           "TXN00001",
           "Nirosha Kodithuwakku",
           "Adults\nChild",
-          bgColor: gold40,
+          bgColor: AppColours.goldOpacity40,
         ),
         _buildReservationRow(
           "TXN00002",
           "Lahiru Dissanayake",
           "Adults\nChild",
-          bgColor: gold40,
+          bgColor: AppColours.goldOpacity40,
         ),
         _buildReservationRow(
           "TXN00003",
           "Dhinusha Ravi",
           "Adults\nChild",
-          bgColor: gold40,
+          bgColor: AppColours.goldOpacity40,
         ),
         _buildReservationRow(
           "TOTAL RESERVATIONS :",
           "",
           "",
           isFooter: true,
-          bgColor: goldColor,
+          bgColor: AppColours.gold,
         ),
       ],
     );
@@ -311,13 +314,11 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
     bool isTotal = false,
     required Color bgColor,
   }) {
-    const blackColor = Color(0xFF000000);
-
     final textStyle = TextStyle(
       fontFamily: 'TT Commons Medium',
       fontSize: 14,
       fontWeight: isHeader || isTotal ? FontWeight.w600 : FontWeight.bold,
-      color: blackColor,
+      color: AppColours.black,
     );
 
     return TableRow(
@@ -347,7 +348,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
       fontFamily: 'TT Commons Medium',
       fontSize: 14,
       fontWeight: FontWeight.bold,
-      color: Color(0xFF000000),
+      color: AppColours.black,
     );
     final boldStyle = textStyle.copyWith(fontWeight: FontWeight.w600);
 
@@ -388,19 +389,19 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
         height: 35,
         decoration: BoxDecoration(
           color: isSelected ? goldColor : Colors.transparent,
-          border: Border.all(color: Colors.white),
+          border: Border.all(color: AppColours.white),
           borderRadius: BorderRadius.circular(5),
         ),
         child: Row(
           children: [
-            Icon(icon, color: Colors.white, size: 18),
+            Icon(icon, color: AppColours.white, size: 18),
             const SizedBox(width: 6),
             Text(
               label,
               style: const TextStyle(
                 fontFamily: 'TT Commons Regular',
                 fontSize: 15,
-                color: Colors.white,
+                color: AppColours.white,
               ),
             ),
           ],

@@ -1,3 +1,4 @@
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'sidebar_page.dart';
 import 'account_personal_info_page.dart';
@@ -10,11 +11,11 @@ class MyAccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const SidebarPage(),
-      backgroundColor: Colors.white,
+      backgroundColor: AppColours.white,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(96),
         child: Container(
-          color: const Color(0xFFAC9A58),
+          color: AppColours.gold,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SafeArea(
             child: Row(
@@ -22,7 +23,7 @@ class MyAccountPage extends StatelessWidget {
               children: [
                 Builder(
                   builder: (context) => IconButton(
-                    icon: const Icon(Icons.menu, color: Colors.white),
+                    icon: const Icon(Icons.menu, color: AppColours.white),
                     onPressed: () {
                       Scaffold.of(context).openDrawer();
                     },
@@ -51,7 +52,7 @@ class MyAccountPage extends StatelessWidget {
                       height: 11,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        border: Border.all(color: Colors.white, width: 1.5),
+                        border: Border.all(color: AppColours.white, width: 1.5),
                       ),
                     ),
                     Positioned(
@@ -71,7 +72,7 @@ class MyAccountPage extends StatelessWidget {
                     fontFamily: 'TT Commons Medium',
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
-                    color: Colors.white,
+                    color: AppColours.white,
                   ),
                 ),
               ],
@@ -108,7 +109,7 @@ class MyAccountPage extends StatelessWidget {
                 const SizedBox(height: 20),
                 _buildInfoRow("User Venues:", "No Venues Assigned"),
                 const SizedBox(height: 20),
-                const Divider(color: Colors.black),
+                const Divider(color: AppColours.black),
                 // --- Password Section ---
                 const SizedBox(height: 30),
                 _buildSectionTitle(
@@ -141,7 +142,7 @@ class MyAccountPage extends StatelessWidget {
           style: const TextStyle(
             fontFamily: 'CormorantGaramond-Bold',
             fontSize: 22,
-            color: Colors.black,
+            color: AppColours.black,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -166,7 +167,7 @@ class MyAccountPage extends StatelessWidget {
               style: const TextStyle(
                 fontFamily: 'TT Commons Medium',
                 fontSize: 13,
-                color: Colors.black,
+                color: AppColours.black,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -182,7 +183,7 @@ class MyAccountPage extends StatelessWidget {
                   style: const TextStyle(
                     fontFamily: 'TT Commons Regular',
                     fontSize: 13,
-                    color: Colors.black,
+                    color: AppColours.black,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -193,7 +194,7 @@ class MyAccountPage extends StatelessWidget {
                       vertical: 2,
                     ),
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 245, 193, 5),
+                      color: AppColours.yellowAccent,
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Text(
@@ -201,7 +202,7 @@ class MyAccountPage extends StatelessWidget {
                       style: const TextStyle(
                         fontFamily: 'TT Commons Medium',
                         fontSize: 10,
-                        color: Colors.black,
+                        color: AppColours.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -220,7 +221,7 @@ class OvalRingPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.white
+      ..color = AppColours.white
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.5
       ..strokeCap = StrokeCap.round

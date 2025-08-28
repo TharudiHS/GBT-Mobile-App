@@ -1,4 +1,5 @@
 import 'package:bawatrust_app/utils/app_colours.dart';
+import 'package:bawatrust_app/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'sessionlist_page.dart';
 import 'my_account_page.dart';
@@ -45,21 +46,13 @@ class SidebarPage extends StatelessWidget {
                           SizedBox(height: 5),
                           Text(
                             'User Name',
-                            style: TextStyle(
-                              fontFamily: 'TT Commons Regular',
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: AppColours.white,
-                            ),
+                            style: TextStyles
+                                .size16WeightBoldTTCommonsRegularwhite,
                           ),
                           SizedBox(height: 2),
                           Text(
                             'userlogin@gmail.com',
-                            style: TextStyle(
-                              fontFamily: 'TT Commons Regular',
-                              fontSize: 12,
-                              color: AppColours.white,
-                            ),
+                            style: TextStyles.size12TTCommonsRegularwhite,
                           ),
                         ],
                       ),
@@ -88,11 +81,7 @@ class SidebarPage extends StatelessWidget {
             leading: const Icon(Icons.schedule, color: AppColours.black),
             title: const Text(
               'Session List',
-              style: TextStyle(
-                fontFamily: 'TT Commons Regular',
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyles.size16WeightBoldTTCommonsRegular,
             ),
             trailing: const Icon(Icons.chevron_right, color: AppColours.gold),
             onTap: () {
@@ -113,11 +102,7 @@ class SidebarPage extends StatelessWidget {
             ),
             title: const Text(
               "Today's Reservations",
-              style: TextStyle(
-                fontFamily: 'TT Commons Regular',
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyles.size16WeightBoldTTCommonsRegular,
             ),
             trailing: const Icon(Icons.chevron_right, color: AppColours.gold),
             onTap: () {
@@ -142,12 +127,7 @@ class SidebarPage extends StatelessWidget {
                   },
                   child: const Text(
                     'Log out',
-                    style: TextStyle(
-                      fontFamily: 'TT Commons Regular',
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: AppColours.white,
-                    ),
+                    style: TextStyles.size16WeightBoldTTCommonsRegularwhite,
                   ),
                 ),
               ],

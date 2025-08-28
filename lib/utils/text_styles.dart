@@ -34,6 +34,12 @@ class TextStyles {
     fontWeight: FontWeight.bold,
     color: AppColours.black,
   );
+  static const TextStyle size16WeightBoldTTCommonsRegularwhite = TextStyle(
+    fontFamily: 'TT Commons Regular',
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: AppColours.white,
+  );
   static const TextStyle size12TTCommonsRegular = TextStyle(
     fontFamily: 'TT Commons Regular',
     fontSize: 12,
@@ -43,6 +49,11 @@ class TextStyles {
     fontFamily: 'TT Commons Regular',
     fontSize: 12,
     fontWeight: FontWeight.bold,
+    color: AppColours.white,
+  );
+  static const TextStyle size12TTCommonsRegularwhite = TextStyle(
+    fontFamily: 'TT Commons Regular',
+    fontSize: 12,
     color: AppColours.white,
   );
   static const TextStyle size17WeightBoldTTCommonsRegular = TextStyle(

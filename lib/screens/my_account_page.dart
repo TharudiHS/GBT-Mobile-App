@@ -1,4 +1,5 @@
 import 'package:bawatrust_app/utils/app_colours.dart';
+import 'package:bawatrust_app/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'sidebar_page.dart';
 import 'account_personal_info_page.dart';
@@ -68,12 +69,7 @@ class MyAccountPage extends StatelessWidget {
                 const SizedBox(width: 28), // reduced spacing from 10 to 6
                 const Text(
                   "My Account",
-                  style: TextStyle(
-                    fontFamily: 'TT Commons Medium',
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: AppColours.white,
-                  ),
+                  style: TextStyles.size16WeightBoldTTCommonsMedium,
                 ),
               ],
             ),
@@ -139,12 +135,7 @@ class MyAccountPage extends StatelessWidget {
       children: [
         Text(
           title,
-          style: const TextStyle(
-            fontFamily: 'CormorantGaramond-Bold',
-            fontSize: 22,
-            color: AppColours.black,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyles.size22WeightBoldCormorantGaramondBoldblack,
         ),
         InkWell(
           onTap: onEditTap,
@@ -164,12 +155,7 @@ class MyAccountPage extends StatelessWidget {
             width: 110,
             child: Text(
               label,
-              style: const TextStyle(
-                fontFamily: 'TT Commons Medium',
-                fontSize: 13,
-                color: AppColours.black,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyles.size13WeightBoldTTCommonsMedium,
             ),
           ),
           Expanded(
@@ -178,15 +164,7 @@ class MyAccountPage extends StatelessWidget {
               runSpacing: 6,
               crossAxisAlignment: WrapCrossAlignment.center,
               children: [
-                Text(
-                  value,
-                  style: const TextStyle(
-                    fontFamily: 'TT Commons Regular',
-                    fontSize: 13,
-                    color: AppColours.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                Text(value, style: TextStyles.size13WeightBoldTTCommonsRegular),
                 if (badge != null)
                   Container(
                     padding: const EdgeInsets.symmetric(
@@ -199,12 +177,7 @@ class MyAccountPage extends StatelessWidget {
                     ),
                     child: Text(
                       badge,
-                      style: const TextStyle(
-                        fontFamily: 'TT Commons Medium',
-                        fontSize: 10,
-                        color: AppColours.black,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: TextStyles.size10WeightBoldTTCommonsMedium,
                     ),
                   ),
               ],

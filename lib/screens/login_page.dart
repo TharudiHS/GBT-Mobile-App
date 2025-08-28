@@ -1,4 +1,5 @@
 import 'package:bawatrust_app/utils/app_colours.dart';
+import 'package:bawatrust_app/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'sessionlist_page.dart';
 
@@ -59,12 +60,8 @@ class _LoginPageState extends State<LoginPage> {
                     // Title
                     const Text(
                       'Login',
-                      style: TextStyle(
-                        fontFamily: 'CormorantGaramond-Bold',
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: AppColours.black,
-                      ),
+                      style:
+                          TextStyles.size24WeightBoldCormorantGaramondBoldblack,
                     ),
 
                     const SizedBox(height: 24),
@@ -90,11 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           border: InputBorder.none,
                           hintText: 'Email*',
-                          hintStyle: TextStyle(
-                            fontFamily: 'TT Commons Italic',
-                            color: AppColours.greyB5,
-                            fontSize: 12,
-                          ),
+                          hintStyle: TextStyles.size12TTCommonsItalic,
                         ),
                         validator: (value) {
                           if (value == null || value.trim().isEmpty) {
@@ -129,11 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           border: InputBorder.none,
                           hintText: 'Password*',
-                          hintStyle: TextStyle(
-                            fontFamily: 'TT Commons Italic',
-                            color: AppColours.greyB5,
-                            fontSize: 12,
-                          ),
+                          hintStyle: TextStyles.size12TTCommonsItalic,
                         ),
                         validator: (value) {
                           if (value == null || value.trim().isEmpty) {
@@ -183,12 +172,7 @@ class _LoginPageState extends State<LoginPage> {
                         const SizedBox(width: 8),
                         const Text(
                           'Remember me',
-                          style: TextStyle(
-                            fontFamily: 'TT Commons Regular',
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: AppColours.black,
-                          ),
+                          style: TextStyles.size14WeightBoldTTCommonsRegular,
                         ),
                       ],
                     ),
@@ -218,12 +202,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         child: const Text(
                           'Login',
-                          style: TextStyle(
-                            fontFamily: 'TT Commons Regular',
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                            color: AppColours.white,
-                          ),
+                          style: TextStyles.size17WeightBoldTTCommonsRegular,
                         ),
                       ),
                     ),

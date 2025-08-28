@@ -1,4 +1,5 @@
 import 'package:bawatrust_app/screens/my_account_page.dart';
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'sidebar_page.dart';
 
@@ -18,11 +19,11 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const SidebarPage(),
-      backgroundColor: Colors.white,
+      backgroundColor: AppColours.white,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(96),
         child: Container(
-          color: const Color(0xFFAC9A58),
+          color: AppColours.gold,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SafeArea(
             child: Row(
@@ -30,7 +31,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               children: [
                 Builder(
                   builder: (context) => IconButton(
-                    icon: const Icon(Icons.menu, color: Colors.white),
+                    icon: const Icon(Icons.menu, color: AppColours.white),
                     onPressed: () {
                       Scaffold.of(context).openDrawer();
                     },
@@ -46,7 +47,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
         children: [
           // custom person icon
           Container(
-            color: Colors.black,
+            color: AppColours.black,
             padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -59,7 +60,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       height: 11,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        border: Border.all(color: Colors.white, width: 1.5),
+                        border: Border.all(color: AppColours.white, width: 1.5),
                       ),
                     ),
                     Positioned(
@@ -79,7 +80,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                     fontFamily: 'TT Commons Medium',
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
-                    color: Colors.white,
+                    color: AppColours.white,
                   ),
                 ),
               ],
@@ -107,7 +108,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                       child: ElevatedButton(
                         onPressed: () => Navigator.pop(context),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black,
+                          backgroundColor: AppColours.black,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6),
                           ),
@@ -118,7 +119,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                           style: TextStyle(
                             fontFamily: 'TT Commons Medium',
                             fontSize: 15,
-                            color: Colors.white,
+                            color: AppColours.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -138,7 +139,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                           );
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFAC9A58),
+                          backgroundColor: AppColours.gold,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6),
                           ),
@@ -149,7 +150,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                           style: TextStyle(
                             fontFamily: 'TT Commons Medium',
                             fontSize: 15,
-                            color: Colors.white,
+                            color: AppColours.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -174,7 +175,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
           style: const TextStyle(
             fontFamily: 'CormorantGaramond-Bold',
             fontSize: 24,
-            color: Colors.black,
+            color: AppColours.black,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -191,7 +192,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
           style: const TextStyle(
             fontFamily: 'TT Commons Medium',
             fontSize: 16,
-            color: Colors.black,
+            color: AppColours.black,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -201,7 +202,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
           obscureText: true,
           decoration: InputDecoration(
             filled: true,
-            fillColor: const Color(0xFFF2F2F2),
+            fillColor: AppColours.greyF2,
             contentPadding: const EdgeInsets.symmetric(
               horizontal: 12,
               vertical: 14,
@@ -213,14 +214,14 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
             hintText: '**********',
             hintStyle: TextStyle(
               fontFamily: 'TT Commons Italic',
-              color: Color(0xFFB5B5B5),
+              color: AppColours.greyB5,
               fontSize: 12,
             ),
           ),
           style: const TextStyle(
             fontFamily: 'TT Commons Regular',
             fontSize: 13,
-            color: Colors.black,
+            color: AppColours.black,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -234,7 +235,7 @@ class OvalRingPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.white
+      ..color = AppColours.white
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.5
       ..strokeCap = StrokeCap.round

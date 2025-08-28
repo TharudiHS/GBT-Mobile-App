@@ -108,7 +108,7 @@ class MyAccountPage extends StatelessWidget {
                 const SizedBox(height: 20),
                 _buildInfoRow("User Venues:", "No Venues Assigned"),
                 const SizedBox(height: 20),
-                const Divider(color: Colors.black), // same as #0000001C
+                const Divider(color: Colors.black),
                 // --- Password Section ---
                 const SizedBox(height: 30),
                 _buildSectionTitle(

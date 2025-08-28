@@ -12,4 +12,5 @@ class AppColours {
   static const Color goldStrong = Color(0xFFAC9A58);
   static const Color cream = Color(0xFFFFF9EC);
   static const Color yellowAccent = Color.fromARGB(255, 245, 193, 5);
+  static const Color greyF2 = Color(0xFFF2F2F2);
 }

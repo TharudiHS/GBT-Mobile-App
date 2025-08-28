@@ -1,3 +1,4 @@
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'sessionlist_page.dart';
 import 'my_account_page.dart';
@@ -14,7 +15,7 @@ class SidebarPage extends StatelessWidget {
           Stack(
             children: [
               Container(
-                color: const Color(0xFFAC9A58),
+                color: AppColours.gold,
                 padding: const EdgeInsets.only(top: 60, left: 20),
                 height: 130,
                 width: double.infinity,
@@ -48,7 +49,7 @@ class SidebarPage extends StatelessWidget {
                               fontFamily: 'TT Commons Regular',
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                              color: AppColours.white,
                             ),
                           ),
                           SizedBox(height: 2),
@@ -57,7 +58,7 @@ class SidebarPage extends StatelessWidget {
                             style: TextStyle(
                               fontFamily: 'TT Commons Regular',
                               fontSize: 12,
-                              color: Colors.white,
+                              color: AppColours.white,
                             ),
                           ),
                         ],
@@ -71,7 +72,7 @@ class SidebarPage extends StatelessWidget {
                 top: 2,
                 right: 3,
                 child: IconButton(
-                  icon: const Icon(Icons.close, color: Colors.white),
+                  icon: const Icon(Icons.close, color: AppColours.white),
                   onPressed: () {
                     Navigator.pop(context);
                   },
@@ -84,7 +85,7 @@ class SidebarPage extends StatelessWidget {
 
           // Menu Items
           ListTile(
-            leading: const Icon(Icons.schedule, color: Colors.black),
+            leading: const Icon(Icons.schedule, color: AppColours.black),
             title: const Text(
               'Session List',
               style: TextStyle(
@@ -93,7 +94,7 @@ class SidebarPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            trailing: const Icon(Icons.chevron_right, color: Color(0xFFAC9A58)),
+            trailing: const Icon(Icons.chevron_right, color: AppColours.gold),
             onTap: () {
               Navigator.pushReplacement(
                 context,
@@ -103,10 +104,13 @@ class SidebarPage extends StatelessWidget {
               );
             },
           ),
-          const Divider(indent: 16, endIndent: 16, color: Color(0xFFE5E5E5)),
+          const Divider(indent: 16, endIndent: 16, color: AppColours.greyE5),
 
           ListTile(
-            leading: const Icon(Icons.confirmation_number, color: Colors.black),
+            leading: const Icon(
+              Icons.confirmation_number,
+              color: AppColours.black,
+            ),
             title: const Text(
               "Today's Reservations",
               style: TextStyle(
@@ -115,7 +119,7 @@ class SidebarPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            trailing: const Icon(Icons.chevron_right, color: Color(0xFFAC9A58)),
+            trailing: const Icon(Icons.chevron_right, color: AppColours.gold),
             onTap: () {
               // Handle reservation logic (to do)
             },
@@ -130,7 +134,7 @@ class SidebarPage extends StatelessWidget {
             height: 56,
             child: Row(
               children: [
-                const Icon(Icons.logout, color: Colors.white),
+                const Icon(Icons.logout, color: AppColours.white),
                 const SizedBox(width: 10),
                 GestureDetector(
                   onTap: () {
@@ -142,7 +146,7 @@ class SidebarPage extends StatelessWidget {
                       fontFamily: 'TT Commons Regular',
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: AppColours.white,
                     ),
                   ),
                 ),

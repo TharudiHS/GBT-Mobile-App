@@ -1,3 +1,4 @@
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 
 class TicketPopup extends StatelessWidget {
@@ -28,7 +29,7 @@ class TicketPopup extends StatelessWidget {
         height: 412,
         padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
-          color: const Color(0xFFAC9A58),
+          color: AppColours.gold,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Stack(
@@ -47,7 +48,7 @@ class TicketPopup extends StatelessWidget {
                         style: const TextStyle(
                           fontFamily: 'TT Commons DemiBold',
                           fontSize: 24,
-                          color: Colors.white,
+                          color: AppColours.white,
                         ),
                       ),
                     ),
@@ -61,7 +62,7 @@ class TicketPopup extends StatelessWidget {
                           vertical: 5,
                         ),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF958654),
+                          color: AppColours.darkGold,
                           borderRadius: BorderRadius.circular(5),
                         ),
                         child: Text(
@@ -69,7 +70,7 @@ class TicketPopup extends StatelessWidget {
                           style: const TextStyle(
                             fontFamily: 'TT Commons Regular',
                             fontSize: 14,
-                            color: Colors.white,
+                            color: AppColours.white,
                           ),
                         ),
                       ),
@@ -85,7 +86,7 @@ class TicketPopup extends StatelessWidget {
                   style: const TextStyle(
                     fontFamily: 'TT Commons Regular',
                     fontSize: 10,
-                    color: Colors.white,
+                    color: AppColours.white,
                   ),
                 ),
 
@@ -97,7 +98,7 @@ class TicketPopup extends StatelessWidget {
                   height: 62,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: const Color(0xFF958654),
+                    color: AppColours.darkGold,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Column(
@@ -108,7 +109,7 @@ class TicketPopup extends StatelessWidget {
                         style: const TextStyle(
                           fontFamily: 'TT Commons Medium',
                           fontSize: 20,
-                          color: Colors.white,
+                          color: AppColours.white,
                         ),
                       ),
                       const SizedBox(height: 2),
@@ -117,7 +118,7 @@ class TicketPopup extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'TT Commons Regular',
                           fontSize: 13,
-                          color: Colors.white,
+                          color: AppColours.white,
                         ),
                       ),
                     ],
@@ -126,7 +127,7 @@ class TicketPopup extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                const Divider(color: Colors.white),
+                const Divider(color: AppColours.white),
 
                 const SizedBox(height: 12),
 
@@ -139,7 +140,7 @@ class TicketPopup extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'TT Commons Regular',
                           fontSize: 14,
-                          color: Colors.white,
+                          color: AppColours.white,
                         ),
                       ),
                       const SizedBox(height: 18),
@@ -148,7 +149,7 @@ class TicketPopup extends StatelessWidget {
                         style: const TextStyle(
                           fontFamily: 'TT Commons Medium',
                           fontSize: 14,
-                          color: Colors.white,
+                          color: AppColours.white,
                         ),
                       ),
                     ],
@@ -162,7 +163,7 @@ class TicketPopup extends StatelessWidget {
                   height: 45,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: AppColours.black,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(6),
                       ),
@@ -173,7 +174,7 @@ class TicketPopup extends StatelessWidget {
                       style: TextStyle(
                         fontFamily: 'TT Commons Medium',
                         fontSize: 16,
-                        color: Colors.white,
+                        color: AppColours.white,
                       ),
                     ),
                   ),
@@ -192,7 +193,7 @@ class TicketPopup extends StatelessWidget {
                   height: 15,
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.black,
+                    color: AppColours.black,
                   ),
                   child: Center(
                     child: Image.asset(

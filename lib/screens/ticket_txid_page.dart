@@ -1,4 +1,5 @@
 import 'package:bawatrust_app/utils/app_colours.dart';
+import 'package:bawatrust_app/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'ticketscan_page.dart';
 import 'ticket_summary_page.dart';
@@ -104,21 +105,12 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                     children: [
                       Text(
                         widget.title,
-                        style: const TextStyle(
-                          fontFamily: 'TT Commons Regular',
-                          fontWeight: FontWeight.bold,
-                          fontSize: 17,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size17WeightBoldTTCommonsRegular,
                       ),
                       const SizedBox(height: 7),
                       Text(
                         widget.date,
-                        style: const TextStyle(
-                          fontFamily: 'TT Commons Regular',
-                          fontSize: 12,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size12TTCommonsRegularwhite,
                       ),
                     ],
                   ),
@@ -134,11 +126,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                   ),
                   child: Text(
                     widget.time,
-                    style: const TextStyle(
-                      fontFamily: 'TT Commons Regular',
-                      fontSize: 14,
-                      color: AppColours.white,
-                    ),
+                    style: TextStyles.size14TTCommonsRegular,
                   ),
                 ),
               ],
@@ -155,12 +143,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
               children: [
                 Text(
                   'Enter a Reference ID',
-                  style: TextStyle(
-                    fontFamily: 'CormorantGaramond-Bold',
-                    fontSize: 30,
-                    fontWeight: FontWeight.normal,
-                    color: AppColours.black,
-                  ),
+                  style: TextStyles.size30CormorantGaramondBoldblack,
                 ),
                 SizedBox(height: 6),
                 // Golden line
@@ -233,11 +216,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
 
                     child: const Text(
                       'Verify',
-                      style: TextStyle(
-                        fontFamily: 'TT Commons Regular',
-                        fontSize: 16,
-                        color: AppColours.white,
-                      ),
+                      style: TextStyles.size16TTCommonsRegularwhite,
                     ),
                   ),
                 ),
@@ -285,14 +264,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
           children: [
             Icon(icon, color: AppColours.white, size: 18),
             const SizedBox(width: 6),
-            Text(
-              label,
-              style: const TextStyle(
-                fontFamily: 'TT Commons Regular',
-                fontSize: 15,
-                color: AppColours.white,
-              ),
-            ),
+            Text(label, style: TextStyles.size15TCommonsRegular),
           ],
         ),
       ),

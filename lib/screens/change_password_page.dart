@@ -1,5 +1,6 @@
 import 'package:bawatrust_app/screens/my_account_page.dart';
 import 'package:bawatrust_app/utils/app_colours.dart';
+import 'package:bawatrust_app/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'sidebar_page.dart';
 
@@ -76,12 +77,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                 const SizedBox(width: 28), // reduced spacing from 10 to 6
                 const Text(
                   "My Account",
-                  style: TextStyle(
-                    fontFamily: 'TT Commons Medium',
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: AppColours.white,
-                  ),
+                  style: TextStyles.size16WeightBoldTTCommonsMedium,
                 ),
               ],
             ),
@@ -116,12 +112,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         ),
                         child: const Text(
                           'Cancel',
-                          style: TextStyle(
-                            fontFamily: 'TT Commons Medium',
-                            fontSize: 15,
-                            color: AppColours.white,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: TextStyles.size15WeightBoldTTCommonsMedium,
                         ),
                       ),
                     ),
@@ -147,12 +138,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         ),
                         child: const Text(
                           'Save',
-                          style: TextStyle(
-                            fontFamily: 'TT Commons Medium',
-                            fontSize: 15,
-                            color: AppColours.white,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: TextStyles.size15WeightBoldTTCommonsMedium,
                         ),
                       ),
                     ),
@@ -172,12 +158,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
       children: [
         Text(
           title,
-          style: const TextStyle(
-            fontFamily: 'CormorantGaramond-Bold',
-            fontSize: 24,
-            color: AppColours.black,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyles.size24WeightBoldCormorantGaramondBoldblack,
         ),
       ],
     );
@@ -187,15 +168,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          label,
-          style: const TextStyle(
-            fontFamily: 'TT Commons Medium',
-            fontSize: 16,
-            color: AppColours.black,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        Text(label, style: TextStyles.size16WeightBoldTTCommonsMediumblack),
         const SizedBox(height: 20),
         TextField(
           controller: controller,
@@ -212,18 +185,9 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
               borderSide: BorderSide.none,
             ),
             hintText: '**********',
-            hintStyle: TextStyle(
-              fontFamily: 'TT Commons Italic',
-              color: AppColours.greyB5,
-              fontSize: 12,
-            ),
+            hintStyle: TextStyles.size12TTCommonsItalic,
           ),
-          style: const TextStyle(
-            fontFamily: 'TT Commons Regular',
-            fontSize: 13,
-            color: AppColours.black,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyles.size13WeightBoldTTCommonsRegular,
         ),
       ],
     );

@@ -16,6 +16,11 @@ class TextStyles {
     fontWeight: FontWeight.bold,
     color: AppColours.black,
   );
+  static const TextStyle size30CormorantGaramondBoldblack = TextStyle(
+    fontFamily: 'CormorantGaramond-Bold',
+    fontSize: 30,
+    color: AppColours.black,
+  );
   static const TextStyle size24TTCommonsDemiBold = TextStyle(
     fontFamily: 'TT Commons DemiBold',
     fontSize: 24,
@@ -52,6 +57,11 @@ class TextStyles {
     fontFamily: 'TT Commons Regular',
     fontSize: 16,
     fontWeight: FontWeight.bold,
+    color: AppColours.white,
+  );
+  static const TextStyle size16TTCommonsRegularwhite = TextStyle(
+    fontFamily: 'TT Commons Regular',
+    fontSize: 16,
     color: AppColours.white,
   );
   static const TextStyle size12TTCommonsRegular = TextStyle(

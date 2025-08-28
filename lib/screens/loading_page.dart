@@ -1,4 +1,5 @@
 import 'package:bawatrust_app/utils/app_colours.dart';
+import 'package:bawatrust_app/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'login_page.dart'; // Make sure this import is correct
 
@@ -50,14 +51,7 @@ class _LoadingPageState extends State<LoadingPage> {
               padding: const EdgeInsets.only(bottom: 340),
               child: Text(
                 'GEOFFREY BAWA TRUST',
-                style: const TextStyle(
-                  fontFamily: 'CormorantGaramond-Bold',
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: AppColours.white,
-                  height: 29 / 24,
-                  letterSpacing: 0,
-                ),
+                style: TextStyles.size24WeightBoldCormorantGaramondBold,
               ),
             ),
           ),

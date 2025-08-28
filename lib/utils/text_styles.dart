@@ -33,4 +33,46 @@ class TextStyles {
     fontWeight: FontWeight.bold,
     fontSize: 17,
   );
+  static const TextStyle size16WeightBoldTTCommonsMedium = TextStyle(
+    fontFamily: 'TT Commons Medium',
+    color: AppColours.white,
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+  );
+  static const TextStyle size16WeightBoldTTCommonsMediumblack = TextStyle(
+    fontFamily: 'TT Commons Medium',
+    color: AppColours.black,
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+  );
+  static const TextStyle size15WeightBoldTTCommonsMedium = TextStyle(
+    fontFamily: 'TT Commons Medium',
+    color: AppColours.white,
+    fontWeight: FontWeight.bold,
+    fontSize: 15,
+  );
+  static const TextStyle size22WeightBoldCormorantGaramondBoldblack = TextStyle(
+    fontFamily: 'CormorantGaramond-Bold',
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+    color: AppColours.black,
+  );
+  static const TextStyle size13WeightBoldTTCommonsMedium = TextStyle(
+    fontFamily: 'TT Commons Medium',
+    color: AppColours.black,
+    fontWeight: FontWeight.bold,
+    fontSize: 13,
+  );
+  static const TextStyle size13WeightBoldTTCommonsRegular = TextStyle(
+    fontFamily: 'TT Commons Regular',
+    color: AppColours.black,
+    fontWeight: FontWeight.bold,
+    fontSize: 13,
+  );
+  static const TextStyle size10WeightBoldTTCommonsMedium = TextStyle(
+    fontFamily: 'TT Commons Medium',
+    color: AppColours.black,
+    fontWeight: FontWeight.bold,
+    fontSize: 10,
+  );
 }

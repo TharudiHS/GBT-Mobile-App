@@ -1,3 +1,4 @@
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'sidebar_page.dart';
 
@@ -8,11 +9,11 @@ class AccountPersonalInfoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const SidebarPage(),
-      backgroundColor: Colors.white,
+      backgroundColor: AppColours.white,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(96),
         child: Container(
-          color: const Color(0xFFAC9A58),
+          color: AppColours.gold,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SafeArea(
             child: Row(
@@ -20,7 +21,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
               children: [
                 Builder(
                   builder: (context) => IconButton(
-                    icon: const Icon(Icons.menu, color: Colors.white),
+                    icon: const Icon(Icons.menu, color: AppColours.white),
                     onPressed: () {
                       Scaffold.of(context).openDrawer();
                     },
@@ -36,7 +37,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
         children: [
           // custom person icon
           Container(
-            color: Colors.black,
+            color: AppColours.black,
             padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,7 +50,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
                       height: 11,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        border: Border.all(color: Colors.white, width: 1.5),
+                        border: Border.all(color: AppColours.white, width: 1.5),
                       ),
                     ),
                     Positioned(
@@ -69,7 +70,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
                     fontFamily: 'TT Commons Medium',
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
-                    color: Colors.white,
+                    color: AppColours.white,
                   ),
                 ),
               ],
@@ -100,7 +101,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
                 const SizedBox(height: 10),
                 _buildVenueCard("Number 11, Colombo 03"),
                 const SizedBox(height: 20),
-                const Divider(color: Colors.black), // same as #0000001C
+                const Divider(color: AppColours.black),
                 // --- Password Section ---
                 const SizedBox(height: 30),
                 _buildSectionTitle("Password", onEditTap: () {}),
@@ -126,11 +127,11 @@ class AccountPersonalInfoPage extends StatelessWidget {
           style: const TextStyle(
             fontFamily: 'CormorantGaramond-Bold',
             fontSize: 22,
-            color: Colors.black,
+            color: AppColours.black,
             fontWeight: FontWeight.bold,
           ),
         ),
-        const Icon(Icons.edit, size: 20, color: Colors.black),
+        const Icon(Icons.edit, size: 20, color: AppColours.black),
       ],
     );
   }
@@ -146,7 +147,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
             style: const TextStyle(
               fontFamily: 'TT Commons Medium',
               fontSize: 13,
-              color: Colors.black,
+              color: AppColours.black,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -162,7 +163,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
                 style: const TextStyle(
                   fontFamily: 'TT Commons Regular',
                   fontSize: 13,
-                  color: Colors.black,
+                  color: AppColours.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -173,7 +174,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
                     vertical: 2,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 245, 193, 5),
+                    color: AppColours.yellowAccent,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Text(
@@ -181,7 +182,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
                     style: const TextStyle(
                       fontFamily: 'TT Commons Medium',
                       fontSize: 10,
-                      color: Colors.black,
+                      color: AppColours.black,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -199,7 +200,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
       style: const TextStyle(
         fontFamily: 'TT Commons Medium',
         fontSize: 13,
-        color: Colors.black,
+        color: AppColours.black,
         fontWeight: FontWeight.bold,
       ),
     );
@@ -210,7 +211,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       decoration: BoxDecoration(
-        color: const Color(0xFFF2F2F2),
+        color: AppColours.greyF2,
         borderRadius: BorderRadius.circular(5),
       ),
       child: Text(
@@ -218,7 +219,7 @@ class AccountPersonalInfoPage extends StatelessWidget {
         style: const TextStyle(
           fontFamily: 'TT Commons Regular',
           fontSize: 13,
-          color: Colors.black,
+          color: AppColours.black,
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -231,7 +232,7 @@ class OvalRingPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.white
+      ..color = AppColours.white
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.5
       ..strokeCap = StrokeCap.round

@@ -1,3 +1,4 @@
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'ticketscan_page.dart';
 import 'ticket_summary_page.dart';
@@ -54,16 +55,13 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
 
   @override
   Widget build(BuildContext context) {
-    const Color goldColor = Color(0xFFAC9A58);
-    const Color blackColor = Colors.black;
-
     return Scaffold(
       drawer: const SidebarPage(),
       backgroundColor: Colors.white,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(96),
         child: Container(
-          color: const Color(0xFFAC9A58),
+          color: AppColours.gold,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SafeArea(
             child: Row(
@@ -71,14 +69,14 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
               children: [
                 Builder(
                   builder: (context) => IconButton(
-                    icon: const Icon(Icons.menu, color: Colors.white),
+                    icon: const Icon(Icons.menu, color: AppColours.white),
                     onPressed: () {
                       Scaffold.of(context).openDrawer();
                     },
                   ),
                 ),
                 Image.asset('assets/images/gbt_logo_white.png', height: 40),
-                const Icon(Icons.sync, color: Colors.white),
+                const Icon(Icons.sync, color: AppColours.white),
               ],
             ),
           ),
@@ -89,7 +87,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
           // Session Info Card
           Container(
             width: double.infinity,
-            color: Colors.black,
+            color: AppColours.black,
             padding: const EdgeInsets.all(16),
             child: Row(
               children: [
@@ -110,7 +108,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                           fontFamily: 'TT Commons Regular',
                           fontWeight: FontWeight.bold,
                           fontSize: 17,
-                          color: Colors.white,
+                          color: AppColours.white,
                         ),
                       ),
                       const SizedBox(height: 7),
@@ -119,7 +117,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                         style: const TextStyle(
                           fontFamily: 'TT Commons Regular',
                           fontSize: 12,
-                          color: Colors.white,
+                          color: AppColours.white,
                         ),
                       ),
                     ],
@@ -131,7 +129,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                     vertical: 6,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFAC9A58),
+                    color: AppColours.gold,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Text(
@@ -139,7 +137,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                     style: const TextStyle(
                       fontFamily: 'TT Commons Regular',
                       fontSize: 14,
-                      color: Colors.white,
+                      color: AppColours.white,
                     ),
                   ),
                 ),
@@ -161,7 +159,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                     fontFamily: 'CormorantGaramond-Bold',
                     fontSize: 30,
                     fontWeight: FontWeight.normal,
-                    color: Colors.black,
+                    color: AppColours.black,
                   ),
                 ),
                 SizedBox(height: 6),
@@ -170,7 +168,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                   height: 1,
                   width: 343,
                   child: DecoratedBox(
-                    decoration: BoxDecoration(color: Color(0xFFAC9A58)),
+                    decoration: BoxDecoration(color: AppColours.gold),
                   ),
                 ),
                 SizedBox(height: 20),
@@ -184,7 +182,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: const Color(0xFFF2F2F2),
+                    color: AppColours.greyF2,
                     borderRadius: BorderRadius.circular(6),
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -194,7 +192,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                       hintStyle: TextStyle(
                         fontFamily: 'TT Commons Italic',
                         fontSize: 12,
-                        color: Color(0xFFB5B5B5),
+                        color: AppColours.greyB5,
                       ),
                       border: InputBorder.none,
                     ),
@@ -206,7 +204,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                   height: 45,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFFAC9A58),
+                      backgroundColor: AppColours.gold,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),
                       ),
@@ -215,7 +213,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                       showDialog(
                         context: context,
                         barrierDismissible: true,
-                        barrierColor: Colors.black.withOpacity(0.5),
+                        barrierColor: AppColours.black.withOpacity(0.5),
                         builder: (context) => Dialog(
                           backgroundColor: Colors.transparent,
                           insetPadding: EdgeInsets.zero,
@@ -238,7 +236,7 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
                       style: TextStyle(
                         fontFamily: 'TT Commons Regular',
                         fontSize: 16,
-                        color: Colors.white,
+                        color: AppColours.white,
                       ),
                     ),
                   ),
@@ -251,14 +249,14 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
 
       // Bottom Navigation
       bottomNavigationBar: Container(
-        color: blackColor,
+        color: AppColours.black,
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _buildNavButton(0, Icons.qr_code, "QR", goldColor),
-            _buildNavButton(1, Icons.text_snippet, "TX ID", goldColor),
-            _buildNavButton(2, Icons.article, "Summary", goldColor),
+            _buildNavButton(0, Icons.qr_code, "QR", AppColours.gold),
+            _buildNavButton(1, Icons.text_snippet, "TX ID", AppColours.gold),
+            _buildNavButton(2, Icons.article, "Summary", AppColours.gold),
           ],
         ),
       ),
@@ -280,19 +278,19 @@ class _TicketTxIdPageState extends State<TicketTxIdPage> {
         height: 35,
         decoration: BoxDecoration(
           color: isSelected ? goldColor : Colors.transparent,
-          border: Border.all(color: Colors.white),
+          border: Border.all(color: AppColours.white),
           borderRadius: BorderRadius.circular(5),
         ),
         child: Row(
           children: [
-            Icon(icon, color: Colors.white, size: 18),
+            Icon(icon, color: AppColours.white, size: 18),
             const SizedBox(width: 6),
             Text(
               label,
               style: const TextStyle(
                 fontFamily: 'TT Commons Regular',
                 fontSize: 15,
-                color: Colors.white,
+                color: AppColours.white,
               ),
             ),
           ],

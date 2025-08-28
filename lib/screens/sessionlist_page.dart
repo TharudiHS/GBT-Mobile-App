@@ -1,4 +1,5 @@
 import 'package:bawatrust_app/utils/app_colours.dart';
+import 'package:bawatrust_app/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'sidebar_page.dart';
 import 'ticketscan_page.dart';
@@ -97,13 +98,7 @@ class _SessionListPageState extends State<SessionListPage> {
                 const SizedBox(width: 8),
                 const Text(
                   'Session List',
-                  style: TextStyle(
-                    fontFamily: 'TT Commons Regular',
-                    fontWeight: FontWeight.bold,
-                    fontSize: 22,
-                    color: AppColours.white,
-                    letterSpacing: 0,
-                  ),
+                  style: TextStyles.size22WeightBoldTTCommonsRegular,
                 ),
               ],
             ),
@@ -180,24 +175,9 @@ class _SessionListPageState extends State<SessionListPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontFamily: 'TT Commons Regular',
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: AppColours.black,
-                  ),
-                ),
+                Text(title, style: TextStyles.size16WeightBoldTTCommonsRegular),
                 const SizedBox(height: 9),
-                Text(
-                  date,
-                  style: const TextStyle(
-                    fontFamily: 'TT Commons Regular',
-                    fontSize: 12,
-                    color: AppColours.black,
-                  ),
-                ),
+                Text(date, style: TextStyles.size12TTCommonsRegular),
                 const SizedBox(height: 10),
                 Container(
                   padding: const EdgeInsets.symmetric(
@@ -210,12 +190,7 @@ class _SessionListPageState extends State<SessionListPage> {
                   ),
                   child: Text(
                     time,
-                    style: const TextStyle(
-                      fontFamily: 'TT Commons Regular',
-                      fontWeight: FontWeight.w500,
-                      fontSize: 12,
-                      color: AppColours.white,
-                    ),
+                    style: TextStyles.size12WeightBoldTTCommonsRegular,
                   ),
                 ),
               ],

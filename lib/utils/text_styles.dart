@@ -16,6 +16,7 @@ class TextStyles {
     fontWeight: FontWeight.bold,
     color: AppColours.black,
   );
+
   static const TextStyle size12TTCommonsItalic = TextStyle(
     fontFamily: 'TT Commons Italic',
     color: AppColours.greyB5,
@@ -26,6 +27,23 @@ class TextStyles {
     fontSize: 14,
     fontWeight: FontWeight.bold,
     color: AppColours.black,
+  );
+  static const TextStyle size16WeightBoldTTCommonsRegular = TextStyle(
+    fontFamily: 'TT Commons Regular',
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: AppColours.black,
+  );
+  static const TextStyle size12TTCommonsRegular = TextStyle(
+    fontFamily: 'TT Commons Regular',
+    fontSize: 12,
+    color: AppColours.black,
+  );
+  static const TextStyle size12WeightBoldTTCommonsRegular = TextStyle(
+    fontFamily: 'TT Commons Regular',
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    color: AppColours.white,
   );
   static const TextStyle size17WeightBoldTTCommonsRegular = TextStyle(
     fontFamily: 'TT Commons Regular',
@@ -68,6 +86,13 @@ class TextStyles {
     color: AppColours.black,
     fontWeight: FontWeight.bold,
     fontSize: 13,
+  );
+  static const TextStyle size22WeightBoldTTCommonsRegular = TextStyle(
+    fontFamily: 'TT Commons Regular',
+    color: AppColours.white,
+    fontWeight: FontWeight.bold,
+    fontSize: 22,
+    letterSpacing: 0,
   );
   static const TextStyle size10WeightBoldTTCommonsMedium = TextStyle(
     fontFamily: 'TT Commons Medium',

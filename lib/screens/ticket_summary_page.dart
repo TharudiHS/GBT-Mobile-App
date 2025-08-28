@@ -1,4 +1,5 @@
 import 'package:bawatrust_app/utils/app_colours.dart';
+import 'package:bawatrust_app/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'ticketscan_page.dart';
 import 'ticket_txid_page.dart';
@@ -95,21 +96,12 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                     children: [
                       Text(
                         widget.title,
-                        style: const TextStyle(
-                          fontFamily: 'TT Commons Regular',
-                          fontWeight: FontWeight.bold,
-                          fontSize: 17,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size17WeightBoldTTCommonsRegular,
                       ),
                       const SizedBox(height: 7),
                       Text(
                         widget.date,
-                        style: const TextStyle(
-                          fontFamily: 'TT Commons Regular',
-                          fontSize: 12,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size12TTCommonsRegularwhite,
                       ),
                     ],
                   ),
@@ -125,11 +117,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                   ),
                   child: Text(
                     widget.time,
-                    style: const TextStyle(
-                      fontFamily: 'TT Commons Regular',
-                      fontSize: 14,
-                      color: AppColours.white,
-                    ),
+                    style: TextStyles.size14TTCommonsRegular,
                   ),
                 ),
               ],
@@ -161,12 +149,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                       alignment: Alignment.center,
                       child: Text(
                         "Ticket Summary",
-                        style: TextStyle(
-                          fontFamily: 'TT Commons Medium',
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size14WeightBoldTTCommonsMedium,
                       ),
                     ),
                   ),
@@ -185,12 +168,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
                       alignment: Alignment.center,
                       child: Text(
                         "Today's Reservations",
-                        style: TextStyle(
-                          fontFamily: 'TT Commons Medium',
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: AppColours.white,
-                        ),
+                        style: TextStyles.size14WeightBoldTTCommonsMedium,
                       ),
                     ),
                   ),
@@ -344,12 +322,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
     bool isFooter = false,
     Color bgColor = Colors.transparent,
   }) {
-    const textStyle = TextStyle(
-      fontFamily: 'TT Commons Medium',
-      fontSize: 14,
-      fontWeight: FontWeight.bold,
-      color: AppColours.black,
-    );
+    const textStyle = TextStyles.size14WeightBoldTTCommonsMediumblack;
     final boldStyle = textStyle.copyWith(fontWeight: FontWeight.w600);
 
     return TableRow(
@@ -396,14 +369,7 @@ class _TicketSummaryPageState extends State<TicketSummaryPage> {
           children: [
             Icon(icon, color: AppColours.white, size: 18),
             const SizedBox(width: 6),
-            Text(
-              label,
-              style: const TextStyle(
-                fontFamily: 'TT Commons Regular',
-                fontSize: 15,
-                color: AppColours.white,
-              ),
-            ),
+            Text(label, style: TextStyles.size15TCommonsRegular),
           ],
         ),
       ),

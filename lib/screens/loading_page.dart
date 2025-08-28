@@ -1,3 +1,4 @@
+import 'package:bawatrust_app/utils/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'login_page.dart'; // Make sure this import is correct
 
@@ -28,7 +29,7 @@ class _LoadingPageState extends State<LoadingPage> {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFAC9A58),
+      backgroundColor: AppColours.gold,
       body: Stack(
         children: [
           // Logo
@@ -53,7 +54,7 @@ class _LoadingPageState extends State<LoadingPage> {
                   fontFamily: 'CormorantGaramond-Bold',
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: AppColours.white,
                   height: 29 / 24,
                   letterSpacing: 0,
                 ),
